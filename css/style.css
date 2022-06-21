@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* style the header */
+.header{
+    background-color: lightpink;
+    border: 2px solid black;
+    color: blue;
+    text-align: center;
+    height: 50px;
+    padding-top: 5px;
+}
+
+
+/* style the main container(gallery) */
+.gallery{
+    display: grid;
+    width: 900px;
+    margin-top: 10px;
+    margin-left: 300px;
+    border: 10px outset black;
+    background-color: lightpink;
+    border-radius: 10px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    justify-content: center;
+}
+
+
+/* style the image vertically */
+.v-stretch{
+    grid-row: span 2;
+}
+
+
+/* style the image horizontally */
+.h-stretch{
+    grid-column: span 2;
+}
+
+
+/* style the vertically and horizontally */
+.big-stretch{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+
+
+.gallery div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
